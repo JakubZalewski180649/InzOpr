@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Login Page</h1>
+    <p>Example account form</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="research.html">Research</a>
+    <a href="database.html">Database</a>
+    <a href="login.html">Login</a>
+</nav>
+
+<main>
+    <section class="card">
+        <h2>Sign in</h2>
+
+        <p>Enter the demonstration credentials below.</p>
+
+        <form id="loginForm">
+            <label for="username">Username</label>
+            <input
+                id="username"
+                type="text"
+                placeholder="Enter username"
+                required
+            >
+
+            <label for="password">Password</label>
+            <input
+                id="password"
+                type="password"
+                placeholder="Enter password"
+                required
+            >
+
+            <button type="submit">Log in</button>
+            <button type="reset" class="secondary">Clear fields</button>
+        </form>
+
+        <p id="loginResult" class="message" hidden></p>
+
+        <p>Demo username: admin</p>
+        <p>Demo password: 1234</p>
+
+        <a class="button" href="index.html">Back to home</a>
+    </section>
+</main>
+
+<script>
+    const form = document.getElementById("loginForm");
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        const result = document.getElementById("loginResult");
+
+        result.hidden = false;
+
+        if (username === "admin" && password === "1234") {
+            result.textContent =
+                "Login successful! Welcome, " + username + ".";
+        } else {
+            result.textContent =
+                "Login failed. Check your username and password.";
+        }
+    });
+</script>
+
+</body>
+</html>

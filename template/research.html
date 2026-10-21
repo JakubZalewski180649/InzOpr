@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header>
+    <h1>Research Page</h1>
+    <p>Information about the project</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="research.html">Research</a>
+    <a href="database.html">Database</a>
+    <a href="login.html">Login</a>
+</nav>
+
+<main>
+    <section class="card">
+        <h2>Section One</h2>
+        <p>Replace this with your own content.</p>
+    </section>
+
+    <section class="card">
+        <h2>Section Two</h2>
+        <p>Add more text, pictures, links, or other elements here.</p>
+
+        <button onclick="showPopup(
+            'Research information',
+            'This popup works on this page too.'
+        )">
+            More information
+        </button>
+    </section>
+
+    <section class="card">
+        <h2>Return</h2>
+        <a class="button" href="index.html">Back to home</a>
+    </section>
+</main>
+
+<footer>
+    <p>My School Project</p>
+</footer>
+
+<dialog id="popup">
+    <h2 id="popupTitle">Popup</h2>
+    <p id="popupMessage"></p>
+    <button onclick="closePopup()">Close</button>
+</dialog>
+
+</body>
+</html>

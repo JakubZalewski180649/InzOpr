@@ -1,86 +1,162 @@
 
-/* General page settings */
+/* GENERAL SETTINGS */
+
 * {
     box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #181a20;
-    color: #e0e0e0;
+    background: #171923;
+    color: #eeeeee;
     line-height: 1.6;
 }
 
-/* Header */
 header {
-    background-color: #22252e;
+    background: #222530;
+    padding: 30px 20px;
     text-align: center;
-    padding: 40px 20px;
+    border-bottom: 1px solid #393c4a;
 }
 
 header h1 {
+    color: #a99cff;
     margin: 0;
-    color: #8da5ff;
-    font-size: 2.5rem;
 }
 
-/* Navigation bar */
+header p {
+    color: #b8b9c8;
+}
+
+/* NAVIGATION */
+
 nav {
-    background-color: #292d38;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
     padding: 15px;
-    text-align: center;
+    background: #20232d;
 }
 
 nav a {
-    color: #ffffff;
+    color: white;
     text-decoration: none;
-    margin: 0 15px;
+    padding: 8px 14px;
+    border-radius: 5px;
 }
 
 nav a:hover {
-    color: #8da5ff;
+    background: #39334f;
 }
 
-/* Main content */
+/* MAIN CONTENT */
+
 main {
-    max-width: 900px;
+    width: min(900px, 100%);
     margin: 30px auto;
     padding: 0 20px;
 }
 
-section {
-    background-color: #22252e;
+.card {
+    background: #222530;
+    border: 1px solid #393c4a;
     padding: 25px;
     margin-bottom: 20px;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
-section h2 {
+h2 {
+    color: #a99cff;
     margin-top: 0;
-    color: #8da5ff;
 }
 
-/* Footer */
+/* BUTTONS */
+
+button,
+.button {
+    display: inline-block;
+    background: #7565e8;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 11px 16px;
+    margin: 5px 3px;
+    font-size: 15px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button:hover,
+.button:hover {
+    background: #897af5;
+}
+
+button.secondary,
+.button.secondary {
+    background: #393c4a;
+}
+
+/* INPUT FIELDS */
+
+input,
+textarea,
+select {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 16px;
+    background: #171923;
+    color: white;
+    border: 1px solid #505365;
+    border-radius: 6px;
+    font: inherit;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+/* POPUP */
+
+dialog {
+    width: min(420px, calc(100% - 30px));
+    padding: 25px;
+    background: #222530;
+    color: white;
+    border: 1px solid #505365;
+    border-radius: 12px;
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.75);
+}
+
+/* MESSAGES */
+
+.message {
+    padding: 12px;
+    background: #303348;
+    border-radius: 6px;
+    margin-top: 15px;
+}
+
 footer {
     text-align: center;
+    color: #999aaa;
     padding: 20px;
-    color: #999999;
-    background-color: #22252e;
 }
 
-/* Smaller screens */
+/* SMALL SCREENS */
+
 @media (max-width: 600px) {
-    nav a {
-        display: inline-block;
-        margin: 5px 8px;
+    main {
+        margin-top: 15px;
     }
 
-    header h1 {
-        font-size: 2rem;
+    .card {
+        padding: 18px;
     }
 }

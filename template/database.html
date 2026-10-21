@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Example Database</h1>
+    <p>A template for storing and searching example information</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="research.html">Research</a>
+    <a href="database.html">Database</a>
+    <a href="login.html">Login</a>
+</nav>
+
+<main>
+    <section class="card">
+        <h2>Search</h2>
+
+        <label for="search">Enter a search term:</label>
+        <input id="search" type="text" placeholder="Try typing something...">
+
+        <button onclick="searchRecords()">Search</button>
+
+        <p id="result" class="message">Search results will appear here.</p>
+    </section>
+
+    <section class="card">
+        <h2>Example records</h2>
+        <p>Laboratory</p>
+        <p>Research</p>
+        <p>Maintenance</p>
+
+        <a class="button" href="index.html">Back to home</a>
+    </section>
+</main>
+
+<script>
+    function searchRecords() {
+        const query = document.getElementById("search")
+            .value.trim().toLowerCase();
+
+        const records = [
+            "Laboratory",
+            "Research",
+            "Maintenance"
+        ];
+
+        const matches = records.filter(function(record) {
+            return record.toLowerCase().includes(query);
+        });
+
+        const result = document.getElementById("result");
+
+        if (!query) {
+            result.textContent = "Enter something to search for.";
+        } else if (matches.length > 0) {
+            result.textContent = "Found: " + matches.join(", ");
+        } else {
+            result.textContent = "No matching records found.";
+        }
+    }
+</script>
+
+</body>
+</html>
