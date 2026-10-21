@@ -1,0 +1,86 @@
+
+/* General page settings */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #181a20;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #22252e;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    margin: 0;
+    color: #8da5ff;
+    font-size: 2.5rem;
+}
+
+/* Navigation bar */
+nav {
+    background-color: #292d38;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+nav a:hover {
+    color: #8da5ff;
+}
+
+/* Main content */
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: #22252e;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+section h2 {
+    margin-top: 0;
+    color: #8da5ff;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #999999;
+    background-color: #22252e;
+}
+
+/* Smaller screens */
+@media (max-width: 600px) {
+    nav a {
+        display: inline-block;
+        margin: 5px 8px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+}
